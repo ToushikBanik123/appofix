@@ -1,3 +1,5 @@
+import 'package:appofix/CastomWidget/highlyrecommended.dart';
+import 'package:appofix/CastomWidget/waittime.dart';
 import 'package:appofix/utils/const.dart';
 import 'package:flutter/material.dart';
 import 'package:appofix/CastomWidget/castomWidget.dart';
@@ -24,11 +26,8 @@ class _DrProfilePageState extends State<DrProfilePage> {
             children: [
               CastomAppBar(width: _width, hight: _hight, name: userName),
               Expanded(
-                child: ListView.builder(
-                  itemCount: 1,
-                  itemBuilder: (BuildContext context, int index) {
-                    return DrProfile();
-                  },
+                child: SingleChildScrollView(
+                  child: DrProfile(),
                 ),
               ),
             ],
@@ -54,6 +53,7 @@ class _DrProfileState extends State<DrProfile> {
     String userName = " Toushik";
     return Container(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
@@ -207,300 +207,170 @@ class _DrProfileState extends State<DrProfile> {
             height: 20,
             thickness: 0.1,
           ),
-          // Figma Flutter Generator Frame626759Widget - FRAME - HORIZONTAL
           Container(
-            decoration: BoxDecoration(
-
-            ),
-            child: Row(
-              children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-
-                    children: <Widget>[const
-                    Text('Overall rating :', textAlign: TextAlign.left, style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 1),
-                        fontSize: 12,
-                      ),
-                    ), SizedBox(height : 0),
-                      const Text('4.79', textAlign: TextAlign.left, style: TextStyle(
-                          color: Color.fromRGBO(177, 35, 10, 1),
-                          fontSize: 26,
-                          letterSpacing: 0,
-                      ),
-                      ),
-                      Container(
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            Container(
-                                width: 13.909884452819824,
-                                height: 13.488372802734375,
-                                decoration: const BoxDecoration(
-                                  color : Color.fromRGBO(255, 255, 255, 1),
-                                ),
-                                child: Container(
-                                  child: Image(
-                                    image: AssetImage('assets/icons/star.png'),
-                                  ),
-                                ),
-                            ), SizedBox(width : 0.8430233001708984),
-                            Container(
-                                width: 14.331395149230957,
-                                height: 13.488372802734375,
-                                decoration: BoxDecoration(
-                                  color : Color.fromRGBO(255, 255, 255, 1),
-                                ),
-                                child: Stack(
-                                    children: <Widget>[
-                                      Positioned(
-                                          top: 0.6744168400764465,
-                                          left: 0.7159793972969055,
-                                          child: SvgPicture.asset(
-                                              'assets/images/vector.svg',
-                                              semanticsLabel: 'vector'
-                                          );
-                                      ),
-                                    ]
-                                )
-                            ), SizedBox(width : 0.8430233001708984),
-                            Container(
-                                width: 13.909884452819824,
-                                height: 13.488372802734375,
-                                decoration: BoxDecoration(
-                                  color : Color.fromRGBO(255, 255, 255, 1),
-                                ),
-                                child: Stack(
-                                    children: <Widget>[
-                                      Positioned(
-                                          top: 0.6744168996810913,
-                                          left: 0.694975733757019,
-                                          child: SvgPicture.asset(
-                                              'assets/images/vector.svg',
-                                              semanticsLabel: 'vector'
-                                          );
-                                      ),
-                                    ]
-                                )
-                            ), SizedBox(width : 0.8430233001708984),
-                            Container(
-                                width: 14.331395149230957,
-                                height: 13.488372802734375,
-                                decoration: BoxDecoration(
-                                  color : Color.fromRGBO(255, 255, 255, 1),
-                                ),
-                                child: Stack(
-                                    children: <Widget>[
-                                      Positioned(
-                                          top: 0.6744168400764465,
-                                          left: 0.7160849571228027,
-                                          child: SvgPicture.asset(
-                                              'assets/images/vector.svg',
-                                              semanticsLabel: 'vector'
-                                          );
-                                      ),
-                                    ]
-                                )
-                            ), SizedBox(width : 0.8430233001708984),
-                            Container(
-                                width: 14.331395149230957,
-                                height: 13.488372802734375,
-                                decoration: BoxDecoration(
-                                  color : Color.fromRGBO(255, 255, 255, 1),
-                                ),
-                                child: Stack(
-                                    children: <Widget>[
-                                      Positioned(
-                                          top: 0.6744168400764465,
-                                          left: 0.716523289680481,
-                                          child: SvgPicture.asset(
-                                              'assets/images/vector.svg',
-                                              semanticsLabel: 'vector'
-                                          );
-                                      ),
-                                    ]
-                                )
-                            ),
-
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ), SizedBox(width : 13),
-                Transform.rotate(
-                  angle: 90.00000000000001 * (math.pi / 180),
-                  child: Divider(
-                      color: Color.fromRGBO(0, 0, 0, 1),
-                      thickness: 0.4215116500854492
-                  )
-                  ,
-                ), SizedBox(width : 13),
-                Container(
-                  decoration: BoxDecoration(
-
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-
-                    children: <Widget>[Container(
-                      decoration: BoxDecoration(
-
-                      ),
-                      padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                      child: Row(
+            decoration: BoxDecoration(),
+            child: IntrinsicHeight(
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(),
+                    padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(12, 18.49, 13, 6.49),
+                      child: Column(
                         mainAxisSize: MainAxisSize.min,
-
                         children: <Widget>[
-                          Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(
-                                color : Color.fromRGBO(255, 255, 255, 1),
-                              ),
-                              child: Stack(
-                                  children: <Widget>[
-                                    Positioned(
-                                        top: -0.000019979372154921293,
-                                        left: 3.000089645385742,
-                                        child: Container(
-                                            width: 18.000001907348633,
-                                            height: 24.00054931640625,
-
-                                            child: Stack(
-                                                children: <Widget>[
-                                                  Positioned(
-                                                      top: 0,
-                                                      left: 0,
-                                                      child: SvgPicture.asset(
-                                                          'assets/images/vector.svg',
-                                                          semanticsLabel: 'vector'
-                                                      );
-                                                  ),
-                                                ]
-                                            )
-                                        )
-                                    ),
-                                  ]
-                              )
-                          ), SizedBox(width : 10),
-                          Container(
-                            decoration: BoxDecoration(
-
-                            ),
-                            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-
-                              children: <Widget>[Text('Highly recommended', textAlign: TextAlign.left, style: TextStyle(
-                                  color: Color.fromRGBO(0, 0, 0, 1),
-                                  fontFamily: 'Poppins',
-                                  fontSize: 12,
-                                  letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                  fontWeight: FontWeight.normal,
-                                  height: 1
-                              ),), SizedBox(height : 1),
-                                Text('96% of patients gave this doctor 5 stars', textAlign: TextAlign.left, style: TextStyle(
-                                    color: Color.fromRGBO(0, 0, 0, 0.75),
-                                    fontFamily: 'Poppins',
-                                    fontSize: 8,
-                                    letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                    fontWeight: FontWeight.normal,
-                                    height: 1
-                                ),),
-                              ],
+                          const Text(
+                            'Overall rating :',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color.fromRGBO(0, 0, 0, 1),
+                              fontSize: 14,
                             ),
                           ),
-
-                        ],
-                      ),
-                    ), SizedBox(height : 10),
-                      Container(
-                        decoration: BoxDecoration(
-
-                        ),
-                        padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-
-                          children: <Widget>[
-                            Container(
-                                width: 30,
-                                height: 30,
-                                decoration: BoxDecoration(
-                                  color : Color.fromRGBO(255, 255, 255, 1),
-                                ),
-                                child: Stack(
-                                    children: <Widget>[
-                                      Positioned(
-                                          top: 9.99998664855957,
-                                          left: 12.500567436218262,
-                                          child: SvgPicture.asset(
-                                              'assets/images/vector.svg',
-                                              semanticsLabel: 'vector'
-                                          );
-                                      ),Positioned(
-                                          top: 4.999983787536621,
-                                          left: 2.5006096363067627,
-                                          child: SvgPicture.asset(
-                                              'assets/images/vector.svg',
-                                              semanticsLabel: 'vector'
-                                          );
-                                      ),Positioned(
-                                          top: 2.499986171722412,
-                                          left: 18.749971389770508,
-                                          child: SvgPicture.asset(
-                                              'assets/images/vector.svg',
-                                              semanticsLabel: 'vector'
-                                          );
-                                      ),
-                                    ]
-                                )
-                            ), SizedBox(width : 7),
-                            Container(
+                          const Text(
+                            '4.79',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Color.fromRGBO(177, 35, 10, 1),
+                              fontSize: 28,
+                            ),
+                          ),
+                          Container(
+                            child: Container(
                               decoration: BoxDecoration(
-
+                                color: Color.fromRGBO(255, 255, 255, 1),
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-
-                                children: <Widget>[Text('Excellent wait time', textAlign: TextAlign.left, style: TextStyle(
-                                    color: Color.fromRGBO(0, 0, 0, 1),
-                                    fontFamily: 'Poppins',
-                                    fontSize: 12,
-                                    letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                    fontWeight: FontWeight.normal,
-                                    height: 1
-                                ),), SizedBox(height : 1),
-                                  Text('100% of patients waited less than 30 minutes', textAlign: TextAlign.left, style: TextStyle(
-                                      color: Color.fromRGBO(0, 0, 0, 0.75),
-                                      fontFamily: 'Poppins',
-                                      fontSize: 8,
-                                      letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                      fontWeight: FontWeight.normal,
-                                      height: 1
-                                  ),),
-                                ],
+                              child: Container(
+                                width: _width * 0.15,
+                                child: Image(
+                                  image: AssetImage('assets/icons/star.png'),
+                                ),
                               ),
                             ),
-
-                          ],
-                        ),
+                            // SizedBox(width: 0.8430233001708984),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                  const VerticalDivider(
+                    color: Colors.black87,
+                    thickness: 0.1,
+                  ),
+                  SizedBox(width: 9),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12),
+                    child: Container(
+                      child: Column(
+                        children: const [
+                          highlyrecommended(),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          waittime(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const Divider(
+            color: Colors.black87,
+            height: 20,
+            thickness: 0.2,
+            indent: 10,
+            endIndent: 10,
+          ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(12, 8, 11, 10),
+            child: Text(
+              'About Dr. Smitha Shetty ',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                color: Color.fromRGBO(109, 0, 0, 1),
+                fontFamily: 'Poppins',
+                fontSize: 16,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 8, 13, 5),
+            child: Container(
+              child: Text(
+                  "Dr. Smitha Shetty has completed her Graduation from Bangalore and post-graduation (MDS) in Orthodontics from SDM College of Dental Sciences -one of the top rated Colleges in India.Dr. Smitha Shetty is currently working as an Associate professor at M.R Ambedkar DentalCollege, Bangalore. She has been the recipient for many awards for academic excellence.She has many national and international publications to her credit.She expertise in fixed Orthodontic treatment for correction of Malocclusion in adults andchildren, Lingual or Invisible Orthodontic Therapy, Clear Aligners , Myo-FunctionalTreatment for growing children and Surgical Orthodontics. She is a member of the IndianOrthodontic society& Indian Dental Association."),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(12, 10, 10, 13),
+            child: Text(
+              'Clinic location',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                color: Color.fromRGBO(109, 0, 0, 1),
+                fontFamily: 'Poppins',
+                fontSize: 16,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 7, 10, 10),
+            child: Container(
+              child: Image(
+                image: AssetImage('assets/images/map.png'),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 23, 10, 3.67),
+            child: Text(
+              'ABC Multispeciality  Clinic',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 14,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 3.67),
+            child: Text(
+              'Abc, xyz, Kolkata, WB',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 0.75),
+                fontFamily: 'Poppins',
+                fontSize: 12,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+            child: Row(
+              children: [
+                Image(
+                  height: 14.9,
+                  width: 14.9,
+                  image: AssetImage('assets/icons/getdirections.png'),
+                ),
+                SizedBox(
+                  width: 12.5,
+                ),
+                Text(
+                  'Get Directions',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 0.9200000166893005),
+                    fontFamily: 'Poppins',
+                    fontSize: 12,
                   ),
                 ),
-
               ],
             ),
-          )
+          ),
         ],
       ),
     );

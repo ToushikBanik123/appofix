@@ -257,6 +257,18 @@ class _Doctors_TileState extends State<Doctors_Tile> {
           SizedBox(
             height: 20,
           ),
+          // Figma Flutter Generator AboutdrsmithashettyWidget - TEXT
+          const Text(
+            'About Dr. Smitha Shetty ',
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                color: Color.fromRGBO(109, 0, 0, 1),
+                fontFamily: 'Poppins',
+                fontSize: 16,
+                letterSpacing: 0,
+                fontWeight: FontWeight.normal,
+                height: 1),
+          )
         ],
       ),
     );
