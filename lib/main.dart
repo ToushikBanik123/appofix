@@ -1,4 +1,5 @@
 import 'package:appofix/screens/Dr%20Profile%20Page/Dr.%20Profile%20Page.dart';
+import 'package:appofix/screens/Apoinments/Apoinment.dart';
 import 'package:appofix/screens/Home/Home.dart';
 import 'package:appofix/screens/screens.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const DoctorsList(),
+      home: Apoinment(),
     );
   }
 }
