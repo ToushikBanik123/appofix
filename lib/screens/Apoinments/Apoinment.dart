@@ -17,28 +17,26 @@ class _ApoinmentState extends State<Apoinment> {
     final _hight = MediaQuery.of(context).size.height;
     final _width = MediaQuery.of(context).size.width;
     String userName = " Toushik";
-    return MaterialApp(
-      home: SafeArea(
-        child: Scaffold(
-          body: Column(
-            children: [
-              CastomAppBar(width: _width, hight: _hight, name: userName),
-              Expanded(child: ListView.builder(
-                  itemCount: 15,
-                  itemBuilder: (BuildContext context,int index){
-                    return AppoinmentTile(hight: _hight,
-                      width: _width,
-                      Appoinment_Time: "10:00 am",
-                      Date: "02/05/2022",
-                      clinicName: "ABC Clinic of Kolkata",
-                      clinicLocation: "Kolkata 733129",
-                      Remaining_Time: "30 min",
-                      arrival_status: true,
-                    );
-                  }
-              ),),
-            ],
-          ),
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            CastomAppBar(width: _width, hight: _hight, name: userName),
+            Expanded(child: ListView.builder(
+                itemCount: 15,
+                itemBuilder: (BuildContext context,int index){
+                  return AppoinmentTile(hight: _hight,
+                    width: _width,
+                    Appoinment_Time: "10:00 am",
+                    Date: "02/05/2022",
+                    clinicName: "ABC Clinic of Kolkata",
+                    clinicLocation: "Kolkata 733129",
+                    Remaining_Time: "30 min",
+                    arrival_status: true,
+                  );
+                }
+            ),),
+          ],
         ),
       ),
     );

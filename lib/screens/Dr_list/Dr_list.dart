@@ -1,4 +1,3 @@
-import 'package:appofix/screens/Dr%20Profile%20Page/Dr_Profile_Page.dart';
 import 'package:appofix/screens/Home/Home.dart';
 import 'package:appofix/utils/const.dart';
 import 'package:flutter/material.dart';
@@ -18,22 +17,23 @@ class _DoctorsListState extends State<DoctorsList> {
     final _hight = MediaQuery.of(context).size.height;
     final _width = MediaQuery.of(context).size.width;
     String userName = " Toushik";
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CastomAppBar(width: _width, hight: _hight, name: userName),
-            Expanded(
-              child: ListView.builder(
-                itemCount: 5000000000,
-                itemBuilder: (BuildContext context, int index) {
-                  return Doctors_Tile();
-                },
-              ),
-            )
-          ],
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CastomAppBar(width: _width, hight: _hight, name: userName),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 5000000000,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Doctors_Tile();
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -163,8 +163,6 @@ class _Doctors_TileState extends State<Doctors_Tile> {
                           color: Color.fromRGBO(49, 49, 49, 0.75),
                           fontFamily: 'Poppins',
                           fontSize: 14,
-                          letterSpacing:
-                              0 /*percentages not used in flutter. defaulting to zero*/,
                           fontWeight: FontWeight.normal,
                           height: 1),
                     ),
@@ -192,7 +190,7 @@ class _Doctors_TileState extends State<Doctors_Tile> {
                     ),
                   ),
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 7),
+                  const EdgeInsets.symmetric(horizontal: 5, vertical: 7),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: const <Widget>[
@@ -219,35 +217,27 @@ class _Doctors_TileState extends State<Doctors_Tile> {
           const SizedBox(
             height: 15,
           ),
-          GestureDetector(
-            onTap:(){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const DrProfilePage()),
-              );
-            },
-            child: Container(
-              width: 336,
-              height: 37,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: const [
-                  BoxShadow(color: Color.fromRGBO(0, 0, 0, 0.25), blurRadius: 2)
-                ],
-                color: AppofixRed,
-              ),
-              child: const Center(
-                child: Text(
-                  'Book Appoinment',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                      fontFamily: 'Poppins',
-                      fontSize: 16,
-                      letterSpacing: 0,
-                      fontWeight: FontWeight.normal,
-                      height: 1),
-                ),
+          Container(
+            width: 336,
+            height: 37,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: const [
+                BoxShadow(color: Color.fromRGBO(0, 0, 0, 0.25), blurRadius: 2)
+              ],
+              color: AppofixRed,
+            ),
+            child: const Center(
+              child: Text(
+                'Book Appoinment',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 16,
+                    letterSpacing: 0,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
               ),
             ),
           ),
@@ -265,6 +255,18 @@ class _Doctors_TileState extends State<Doctors_Tile> {
           SizedBox(
             height: 20,
           ),
+          // Figma Flutter Generator AboutdrsmithashettyWidget - TEXT
+          const Text(
+            'About Dr. Smitha Shetty ',
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                color: Color.fromRGBO(109, 0, 0, 1),
+                fontFamily: 'Poppins',
+                fontSize: 16,
+                letterSpacing: 0,
+                fontWeight: FontWeight.normal,
+                height: 1),
+          )
         ],
       ),
     );
